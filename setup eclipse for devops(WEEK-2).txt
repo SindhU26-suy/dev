@@ -1,0 +1,8 @@
+week - 2
+1)   install jdk_____ unzip eclipse__create maven project____filter maven-archetype-webapp  version 1.5________package war________type Y enter_____
+2)  eclipse pom.xml_______go to chrome search  1)java servlet dependency 3.1.0  2) testing dependency 7.10.2   3)selenium dependency 4.27.0_______ add all dependency to pom.xml
+3)  Download apache-tomcat_____unzip_____Open Project Properties, and Click on Targetted Runtime__________Click on New and Select Apache Tomcatv9.0 as below, and click Next_________browse select extract folder_________finish_____
+4)   Open index.jsp and Press Ctrl+Shift+f _______Click Help-> Install New Software, and give https://testng.org/testng-eclipse-update-site/ and name:testNG and Click Add__________
+5)   Goto Eclipse Marketplace and install EGIT______project__team__share project__create repo__________GitHub create repo copy URL____ecplise click commit___unstaged__green icon__staged_____
+write msg  click push and commint_____give GitHub url or user password_____goto GitHub check it______
+6)       ecplise crete test __new __class__public __finish__Add a package name com.internal.Tests;_____
