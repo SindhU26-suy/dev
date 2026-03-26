@@ -1,0 +1,48 @@
+AUTOMATION THE JENKINS PIPELINE  (WEEK - 11)
+
+
+
+
+
+open aws__EC2 instance__launch instance __select ubuntu __free tier as amazoin image___instance type t2.micro____create key pair____Network add __type.source ____download gitbash_____
+right click on pem file open gitbash____goto connect ssh copy it ___paste in gitbash
+-----
+sudo apt update
+sudo apt install openjdk-21-jdk -y
+Sudo apt-get install -y git maven
+git --version 
+mvn --version
+----------
+
+open chrome jenkin.io download and deploye ____generic java package(.war)___link address copy____in gitbash
+--
+wget link address
+--
+java -jar jenkins.war
+---
+take instance public ip   goto chrome paste it add :8080_________gitbash password paste in jenkin page____Select the install suggested pluggins________give all admins____save__finish
+
+job run automatically fetch the code from github to dev server and build the war file and deployed into sit
+
+
+------
+git clone https://github.com/Mahi-Repalle/practice.git
+ll
+cd practice
+ll
+cd src
+ll
+cd main
+ll
+cd webapp
+ll
+vim index.jsp
+git add .
+git status
+git commit -m "ab"
+git push origin master
+-------
+
+goto Jenkins dashboard---war--configuration---trigger---poll scm--- enter crontab values---apply and save----
+
+
