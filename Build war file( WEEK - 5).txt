@@ -1,0 +1,112 @@
+Build war file:( WEEK - 5)
+
+
+open aws__EC2 instance__launch instance __select ubuntu __free tier as amazoin image___instance type t2.micro____create key pair____Network add __type.source ____download gitbash_____
+right click on pem file open gitbash____goto connect ssh copy it ___paste in gitbash
+-----
+sudo apt update
+sudo apt install openjdk-21-jdk -y
+Sudo apt-get install -y git maven
+git --version 
+mvn --version
+----------
+
+open chrome jenkin.io download and deploye ____generic java package(.war)___link address copy____in gitbash
+--
+wget link address
+--
+java -jar jenkins.war
+---
+take instance public ip   goto chrome paste it add :8080_________gitbash password paste in jenkin page____Select the install suggested pluggins________give all admins____save__finish
+
+
+week-5
+
+---------
+sudo su -
+cd /opt
+-----------
+
+browser type maven download____click on the apache-maven.3.9.9.bin.tar.gz ____paste____Unzip the maven gip file
+
+
+------------
+wget link address
+ll
+tar -xvzf apache-maven-3.9.9-bin.tar.gz
+ll
+mv apache-maven-3.9.9 maven
+cd maven
+ll
+pwd
+ll
+cd bin
+ll
+pwd
+./mvn --version
+cd/
+mvn --version
+cd ~
+ll
+sudo vim .profile
+find / -name java-21*
+echo $PATH
+source .profile
+mvn --version
+-----------------
+
+
+install one plug
+Jenkins dashboard--- manage jenkins---plugins----available plugins----maven integration plugin--install---after install restart it
+add java 
+dashboad--manage jenkinis--tools--JAVA-21--unckeck install automatically
+add maven
+dashboad--manage jenkinis--tools--maven--unckeck install automatically---apply and save
+create job 
+dashboad--all--new item--enter war--select maevn project---ok--
+
+copy GitHub url ----dashboard--war---configuration---source code management---select git--paste url--save
+                                                   --build---in goals and options type clean install---apply --save----click build now
+
+after job exection--logout jenkins--stop dev instance--restart dev instance--start Jenkins server--run job
+
+
+----------------------------------------------------------
+Deploy artifcat into sit server
+
+
+Connect to sit machine with git bash-----
+
+
+---------
+sudo apt-get update
+sudo apt-get install -y tomcat9
+sudo apt-get install -y tomcat9-admin
+-----------
+
+publicip of sit server and add 8080
+
+
+------
+cd/etc/tomcat9
+ll
+sudo vim tomcat-users.xml
+sudo service tomcat9 restart
+-----------
+
+
+add one plugin
+
+dashboard--manage jenkins--plugins--available plugins---deplay to container--install
+dashboard--war--configure--select post step--select deploy war/ear to a container-
+dashboard--war--configure--select post build action --select deploy war/ear to a container--in add container tomcat 9----add credentials---give tomcat url along with 8080---a
+
+
+
+Take the sit public  ip address and port no and give the context path name
+
+
+
+
+
+
